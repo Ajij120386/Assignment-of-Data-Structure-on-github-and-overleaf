@@ -1,0 +1,111 @@
+   
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\title {Data Structure}
+
+\begin{document}
+
+\maketitle
+\section{Array}
+An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array). The base value is index 0 and the difference between the two indexes is the offset.
+For simplicity, we can think of an array as a fleet of stairs where on each step is placed a value (let’s say one of your friends). Here, you can identify the location of any of your friends by simply knowing the count of the step they are on. 
+Remember: “Location of next index depends on the data type we use”.
+
+
+\section{Linked List}
+Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at a contiguous location; the elements are linked using pointers.Arrays can be used to store linear data of similar types, but arrays have the following limitations. 
+1) The size of the arrays is fixed: So we must know the upper limit on the number of elements in advance. Also, generally, the allocated memory is equal to the upper limit irrespective of the usage. 
+2) Inserting a new element in an array of elements is expensive because the room has to be created for the new elements and to create room existing elements have to be shifted but in Linked list if we have the head node then we can traverse to any node through it and insert new node at the required position.
+For example, in a system, if we maintain a sorted list of IDs in an array id[]. 
+id[] = [1000, 1010, 1050, 2000, 2040]. 
+And if we want to insert a new ID 1005, then to maintain the sorted order, we have to move all the elements after 1000 (excluding 1000). 
+Deletion is also expensive with arrays until unless some special techniques are used. For example, to delete 1010 in id[], everything after 1010 has to be moved due to this so much work is being done which affects the efficiency of the code.
+Advantages over arrays 
+1) Dynamic size 
+2) Ease of insertion/deletion
+
+
+ 
+\section{Stack}
+Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+
+Mainly the following four basic operations are performed in the stack:
+
+Push: Adds an item to the stack. If the stack is full, then it is said to be an Overflow condition.
+
+Pop: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition.
+
+\section {Sorting Algorithm Complexity}
+
+\begin{tabular}{|l|c |c|r|r|}
+    \hline
+    Name & Gender & Algorithm & Best Case & Expected \\
+    \hline
+    Shuvo & Male & Selection sort & O(N2)  & O(N2)\\
+    \hline
+    Jenisa & Female & Merge sort & O(NlogN) & O(NlogN)\\
+    \hline
+    Rifat & Male & Linear search & O(1) & O(N)\\
+    \hline
+    Fariha & Female & Binary search & O(1) & O(logN)\\
+    \hline
+    Zisad & Male & Flow chart & O(N) & O(logN) \\
+    \hline
+    \end{tabular}
+    
+    \section{Queue}
+   A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
+\section{Binary tree}
+Trees: Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.
+Tree Vocabulary: The topmost node is called root of the tree. The elements that are directly under an element are called its children. The element directly above something is called its parent. For example, ‘a’ is a child of ‘f’, and ‘f’ is the parent of ‘a’. Finally, elements with no children are called leaves.
+
+\section{Graph}
+A graph is a data structure that consists of the following two components: 
+1. A finite set of vertices also called as nodes. 
+2. A finite set of ordered pair of the form (u, v) called as edge. The pair is ordered because (u, v) is not the same as (v, u) in case of a directed graph(di-graph). The pair of the form (u, v) indicates that there is an edge from vertex u to vertex v. The edges may contain weight/value/cost.
+Graphs are used to represent many real-life applications: Graphs are used to represent networks. The networks may include paths in a city or telephone network or circuit network. Graphs are also used in social networks like linkedIn, Facebook. For example, in Facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender, and locale. See this for more applications of graph. 
+Following is an example of an undirected graph with 5 vertices.
+
+\section{Equations}
+\begin{equation}\label{my_first_eqn}
+$(a+b)^2=a^2+2ab+b^2$
+\end{equation}
+\begin{equation}\label{my_second_equation}
+log(ab)=log(a)+log(b)
+\end{equation}
+
+
+
+\section{Binary search Tree}
+Binary Search Tree is a node-based binary tree data structure which has the following properties:
+
+The left subtree of a node contains only nodes with keys lesser than the node’s key.
+The right subtree of a node contains only nodes with keys greater than the node’s key.
+The left and right subtree each must also be a binary search tree.
+Binary Search Tree is a node-based binary tree data structure which has the following properties:  
+
+The left subtree of a node contains only nodes with keys lesser than the node’s key.
+
+The right subtree of a node contains only nodes with keys greater than the node’s key.
+
+The left and right subtree each must also be a binary search tree.
+
+There must be no duplicate nodes.
+
+The above properties of Binary Search Tree provides an ordering among keys so that the operations like search, minimum and maximum can be done fast. If there is no ordering, then we may have to compare every key to search for a given key.
+
+
+Time Complexity: The worst-case time complexity of search and insert operations is O(h) where h is the height of the Binary Search Tree. In the worst case, we may have to travel from root to the deepest leaf node. The height of a skewed tree may become n and the time complexity of search and insert operation may become O(n). 
+
+\begin{figure}
+    \centering
+    \includegraphics{BSTSearch.png}
+    \caption{Illustration of Binary Search Tree: }
+    \label{fig:my_label}
+\end{figure}
+
+\section{Reference}
+\url{https://www.geeksforgeeks.org/data-structures/}
+\end{document}
